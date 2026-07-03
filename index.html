@@ -123,6 +123,13 @@ h2{font-family:var(--display);font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:8
 .stat .lbl{font-size:.82rem;color:var(--ink-soft);margin-top:8px;font-weight:500}
 .about-text p+p{margin-top:16px}
 .about-text strong{color:var(--red)}
+.edu{margin-top:28px;display:grid;gap:12px}
+.edu-title{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--red);display:flex;align-items:center;gap:10px}
+.edu-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(201,162,39,.6),transparent)}
+.edu-item{display:flex;gap:14px;align-items:center;background:var(--white);border-left:4px solid var(--gold);border-radius:12px;padding:14px 18px;box-shadow:var(--shadow);transition:transform .3s}
+.edu-item:hover{transform:translateX(6px)}
+.edu-item .deg{flex:0 0 auto;font-family:var(--display);font-weight:800;font-size:.8rem;letter-spacing:.06em;color:#fff;background:linear-gradient(135deg,var(--red),var(--red-soft));padding:8px 14px;border-radius:99px;text-transform:uppercase}
+.edu-item .sch{font-size:.92rem;font-weight:500}
 
 /* Teaching cards */
 #teaching{background:var(--paper-warm)}
@@ -292,6 +299,17 @@ footer .brand{color:#fff;font-size:1rem}
         <p><span data-lang="vi">Tôi là giảng viên Khoa Công nghệ Thông tin, <strong>Đại học Yersin Đà Lạt</strong>, phụ trách các học phần nền tảng về lập trình, cơ sở dữ liệu và trí tuệ nhân tạo, đồng thời hướng dẫn sinh viên thực tập doanh nghiệp và khóa luận tốt nghiệp.</span><span data-lang="en">I am a lecturer at the Faculty of Information Technology, <strong>Yersin University of Da Lat</strong>, teaching foundational courses in programming, databases and artificial intelligence, while supervising student internships and graduation theses.</span><span data-lang="zh">我是<strong>大叻延森大学</strong>信息技术学院讲师，主讲程序设计、数据库与人工智能等基础课程，同时指导学生企业实习与毕业论文。</span></p>
         <p><span data-lang="vi">Định hướng nghiên cứu của tôi tập trung vào <strong>ứng dụng học máy và học sâu cho dữ liệu Việt Nam</strong>: dự báo giá nông sản Tây Nguyên, nhận dạng thực thể trong tin tuyển dụng CNTT, nhận dạng cây dược liệu bản địa và xây dựng đồ thị tri thức du lịch Đà Lạt. Tôi ưu tiên công bố tại các tạp chí Scopus uy tín và chia sẻ bộ dữ liệu mở cho cộng đồng.</span><span data-lang="en">My research focuses on <strong>applying machine learning and deep learning to Vietnamese data</strong>: forecasting Central Highlands agricultural prices, named-entity recognition in IT job postings, native medicinal plant recognition, and building a Da Lat tourism knowledge graph. I prioritise publishing in reputable Scopus-indexed journals and releasing open datasets for the community.</span><span data-lang="zh">我的研究方向为<strong>面向越南数据的机器学习与深度学习应用</strong>：西原高地农产品价格预测、IT招聘信息命名实体识别、本土药用植物识别，以及大叻旅游知识图谱构建。我注重在知名Scopus索引期刊发表论文，并向社区发布开放数据集。</span></p>
         <p><span data-lang="vi">Hiện tôi đang chuẩn bị cho chương trình <strong>nghiên cứu sinh Tiến sĩ về Trí tuệ nhân tạo</strong>, với mong muốn đưa các bài toán thực tiễn của Việt Nam vào dòng chảy nghiên cứu quốc tế.</span><span data-lang="en">I am currently preparing for a <strong>PhD in Artificial Intelligence</strong>, aiming to bring real-world Vietnamese problems into the international research conversation.</span><span data-lang="zh">目前我正在筹备<strong>人工智能方向的博士研究</strong>，希望将越南的实际问题带入国际学术讨论。</span></p>
+        <div class="edu">
+          <div class="edu-title"><span data-lang="vi">Học vấn</span><span data-lang="en">Education</span><span data-lang="zh">教育背景</span></div>
+          <div class="edu-item">
+            <span class="deg"><span data-lang="vi">Thạc sĩ</span><span data-lang="en">MSc</span><span data-lang="zh">硕士</span></span>
+            <div class="sch"><span data-lang="vi">Đại học Trung Nam, Trung Quốc</span><span data-lang="en">Central South University, China</span><span data-lang="zh">中南大学，中国</span></div>
+          </div>
+          <div class="edu-item">
+            <span class="deg"><span data-lang="vi">Đại học</span><span data-lang="en">BSc</span><span data-lang="zh">本科</span></span>
+            <div class="sch"><span data-lang="vi">Trường Đại học Giao thông vận tải TP. Hồ Chí Minh, Việt Nam</span><span data-lang="en">Ho Chi Minh City University of Transport, Vietnam</span><span data-lang="zh">胡志明市交通运输大学，越南</span></div>
+          </div>
+        </div>
       </div>
       <div class="stats">
         <div class="stat reveal d1"><div class="num" data-count="8">0</div><div class="lbl"><span data-lang="vi">Năm giảng dạy</span><span data-lang="en">Years teaching</span><span data-lang="zh">教学年限</span></div></div>
