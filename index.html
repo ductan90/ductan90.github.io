@@ -6,21 +6,21 @@
 <title>ThS. Nguyễn Đức Tấn — Giảng viên CNTT | Đại học Yersin Đà Lạt</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --red:#9E0A0F;
-  --red-deep:#6E0509;
-  --red-soft:#C4363B;
-  --ink:#221A1B;
-  --ink-soft:#5C4F50;
-  --paper:#FBF8F5;
-  --paper-warm:#F3ECE5;
-  --gold:#C99A3C;
+  --red:#0B6E4F;
+  --red-deep:#073B3A;
+  --red-soft:#08A045;
+  --ink:#13211A;
+  --ink-soft:#52645A;
+  --paper:#F7FBF8;
+  --paper-warm:#E9F4EC;
+  --gold:#C9A227;
   --white:#FFFFFF;
-  --display:'Bricolage Grotesque',sans-serif;
-  --body:'Be Vietnam Pro',sans-serif;
-  --shadow:0 12px 40px rgba(110,5,9,.10);
+  --display:'Bricolage Grotesque','Noto Sans SC',sans-serif;
+  --body:'Be Vietnam Pro','Noto Sans SC',sans-serif;
+  --shadow:0 12px 40px rgba(7,59,58,.10);
   --radius:18px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -32,13 +32,15 @@ body{font-family:var(--body);color:var(--ink);background:var(--paper);line-heigh
 [data-lang]{display:none}
 html[data-active="vi"] [data-lang="vi"]{display:revert}
 html[data-active="en"] [data-lang="en"]{display:revert}
+html[data-active="zh"] [data-lang="zh"]{display:revert}
 span[data-lang],a span[data-lang],button span[data-lang]{display:none}
 html[data-active="vi"] span[data-lang="vi"]{display:inline}
 html[data-active="en"] span[data-lang="en"]{display:inline}
+html[data-active="zh"] span[data-lang="zh"]{display:inline}
 
 /* ===== Nav ===== */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 5vw;display:flex;align-items:center;justify-content:space-between;transition:background .4s,box-shadow .4s,padding .4s}
-nav.scrolled{background:rgba(251,248,245,.92);backdrop-filter:blur(14px);box-shadow:0 2px 24px rgba(34,26,27,.08);padding:12px 5vw}
+nav.scrolled{background:rgba(247,251,248,.94);backdrop-filter:blur(14px);box-shadow:0 2px 24px rgba(7,59,58,.08);padding:12px 5vw}
 .brand{font-family:var(--display);font-weight:800;font-size:1.15rem;color:var(--paper);text-decoration:none;letter-spacing:.02em;transition:color .4s}
 nav.scrolled .brand{color:var(--red)}
 .brand em{font-style:normal;color:var(--gold)}
@@ -66,16 +68,16 @@ nav.scrolled .menu-btn span{background:var(--red)}
 .menu-btn.open span:nth-child(3){top:11px;transform:rotate(-45deg)}
 
 /* ===== Hero ===== */
-header{min-height:100vh;background:linear-gradient(150deg,var(--red-deep) 0%,var(--red) 48%,#B4262B 100%);position:relative;display:flex;align-items:center;overflow:hidden;color:#fff}
+header{min-height:100vh;background:linear-gradient(150deg,var(--red-deep) 0%,var(--red) 48%,#08A045 100%);position:relative;display:flex;align-items:center;overflow:hidden;color:#fff}
 .contours{position:absolute;inset:0;width:100%;height:100%;opacity:.35;will-change:transform}
 .contours path{fill:none;stroke:rgba(255,255,255,.35);stroke-width:1.2;stroke-dasharray:2400;stroke-dashoffset:2400;animation:draw 5s ease forwards}
-.contours path:nth-child(2){animation-delay:.4s;stroke:rgba(201,154,60,.45)}
+.contours path:nth-child(2){animation-delay:.4s;stroke:rgba(201,162,39,.5)}
 .contours path:nth-child(3){animation-delay:.8s}
-.contours path:nth-child(4){animation-delay:1.2s;stroke:rgba(201,154,60,.35)}
+.contours path:nth-child(4){animation-delay:1.2s;stroke:rgba(201,162,39,.4)}
 .contours path:nth-child(5){animation-delay:1.6s}
 @keyframes draw{to{stroke-dashoffset:0}}
 .hero-inner{position:relative;z-index:2;width:min(1100px,90vw);margin:0 auto;padding:130px 0 90px;display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center}
-.eyebrow{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,154,60,.5);padding:7px 16px;border-radius:99px;margin-bottom:22px;opacity:0;animation:rise .8s .3s forwards}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,162,39,.55);padding:7px 16px;border-radius:99px;margin-bottom:22px;opacity:0;animation:rise .8s .3s forwards}
 h1{font-family:var(--display);font-size:clamp(2.5rem,5.6vw,4.2rem);font-weight:800;line-height:1.08;letter-spacing:-.01em;opacity:0;animation:rise .8s .5s forwards}
 h1 .accent{color:var(--gold)}
 .hero-sub{margin-top:20px;font-size:clamp(1rem,1.6vw,1.15rem);color:rgba(255,255,255,.88);max-width:34rem;font-weight:300;opacity:0;animation:rise .8s .7s forwards}
@@ -84,14 +86,14 @@ h1 .accent{color:var(--gold)}
 .hero-cta{margin-top:36px;display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:rise .8s 1.1s forwards}
 .btn{display:inline-block;text-decoration:none;font-weight:600;font-size:.92rem;padding:14px 30px;border-radius:99px;transition:transform .3s,box-shadow .3s}
 .btn:hover{transform:translateY(-3px)}
-.btn-gold{background:var(--gold);color:var(--ink);box-shadow:0 8px 26px rgba(201,154,60,.4)}
+.btn-gold{background:var(--gold);color:var(--ink);box-shadow:0 8px 26px rgba(201,162,39,.45)}
 .btn-ghost{border:1.5px solid rgba(255,255,255,.6);color:#fff}
 .btn-ghost:hover{background:rgba(255,255,255,.12)}
 @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
 .portrait{justify-self:center;position:relative;opacity:0;animation:rise 1s .8s forwards}
 .portrait .frame{width:min(320px,64vw);aspect-ratio:1/1;border-radius:50%;background:#ECECF2;border:3px solid rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;overflow:hidden;backdrop-filter:blur(6px);box-shadow:0 18px 50px rgba(0,0,0,.28)}
 .portrait .frame svg{width:58%;opacity:.85}
-.portrait::before{content:"";position:absolute;inset:-16px;border:1.5px dashed rgba(201,154,60,.65);border-radius:50%;animation:orbit 14s linear infinite}
+.portrait::before{content:"";position:absolute;inset:-16px;border:1.5px dashed rgba(201,162,39,.7);border-radius:50%;animation:orbit 14s linear infinite}
 .portrait::after{content:"";position:absolute;inset:-30px;border:1px solid rgba(255,255,255,.18);border-radius:50%;animation:orbit 22s linear infinite reverse}
 @keyframes orbit{to{transform:rotate(360deg)}}
 .scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;color:rgba(255,255,255,.75);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;text-align:center;animation:bob 2.2s ease-in-out infinite}
@@ -126,15 +128,15 @@ h2{font-family:var(--display);font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:8
 #teaching{background:var(--paper-warm)}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:44px}
 .card{background:var(--white);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s}
-.card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(110,5,9,.16)}
-.card::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--red),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .45s}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(7,59,58,.16)}
+.card::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--red),#6BBF59);transform:scaleX(0);transform-origin:left;transition:transform .45s}
 .card:hover::before{transform:scaleX(1)}
 .card .ic{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--red),var(--red-soft));display:flex;align-items:center;justify-content:center;margin-bottom:18px;position:relative;animation:floaty 4s ease-in-out infinite;transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow .4s,border-radius .4s}
 .card:nth-child(2) .ic{animation-delay:.6s}
 .card:nth-child(3) .ic{animation-delay:1.2s}
 .card:nth-child(4) .ic{animation-delay:1.8s}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-.card:hover .ic{animation-play-state:paused;transform:translateY(-6px) rotate(-8deg) scale(1.12);border-radius:50%;box-shadow:0 12px 28px rgba(158,10,15,.35)}
+.card:hover .ic{animation-play-state:paused;transform:translateY(-6px) rotate(-8deg) scale(1.12);border-radius:50%;box-shadow:0 12px 28px rgba(11,110,79,.35)}
 .card .ic::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);background-size:220% 100%;background-position:120% 0;transition:background-position .7s}
 .card:hover .ic::after{background-position:-120% 0}
 .card .ic svg{width:26px;height:26px;stroke:#fff;transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
@@ -144,7 +146,7 @@ h2{font-family:var(--display);font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:8
 
 /* Research timeline */
 .timeline{margin-top:50px;position:relative;padding-left:34px}
-.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:linear-gradient(to bottom,var(--red),var(--gold))}
+.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:linear-gradient(to bottom,var(--red),#21D375)}
 .titem{position:relative;padding-bottom:44px}
 .titem:last-child{padding-bottom:0}
 .titem::before{content:"";position:absolute;left:-32px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:4px solid var(--red);transition:background .3s,transform .3s;z-index:1}
@@ -152,11 +154,11 @@ h2{font-family:var(--display);font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:8
 .titem:hover::after{animation:ripple 1s ease-out infinite}
 @keyframes ripple{0%{opacity:.6;transform:scale(1)}100%{opacity:0;transform:scale(2.2)}}
 .titem:hover::before{background:var(--gold);transform:scale(1.25)}
-.titem .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);background:rgba(158,10,15,.08);padding:5px 13px;border-radius:99px;margin-bottom:10px}
+.titem .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);background:rgba(11,110,79,.08);padding:5px 13px;border-radius:99px;margin-bottom:10px}
 .titem h3{font-family:var(--display);font-size:1.25rem;font-weight:700;margin-bottom:8px}
 .titem p{color:var(--ink-soft);font-size:.94rem;max-width:44rem}
 .titem .tech{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
-.titem .tech span{font-size:.74rem;font-weight:600;color:var(--red-deep);background:var(--paper-warm);border:1px solid rgba(158,10,15,.18);padding:4px 11px;border-radius:99px}
+.titem .tech span{font-size:.74rem;font-weight:600;color:var(--red-deep);background:var(--paper-warm);border:1px solid rgba(11,110,79,.18);padding:4px 11px;border-radius:99px}
 
 /* Publications */
 #publications{background:linear-gradient(160deg,var(--red-deep),var(--red));color:#fff}
@@ -177,7 +179,7 @@ h2{font-family:var(--display);font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:8
 .c-item{display:flex;gap:18px;align-items:center;background:var(--white);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);transition:transform .3s}
 .c-item:hover{transform:translateX(8px)}
 .c-item .ic{flex:0 0 46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--red),var(--red-soft));display:flex;align-items:center;justify-content:center;transition:border-radius .35s,box-shadow .35s}
-.c-item:hover .ic{border-radius:50%;box-shadow:0 8px 20px rgba(158,10,15,.35)}
+.c-item:hover .ic{border-radius:50%;box-shadow:0 8px 20px rgba(11,110,79,.35)}
 .c-item .ic svg{width:22px;height:22px;stroke:#fff}
 .c-item:hover .ic svg{animation:ring .6s ease}
 @keyframes ring{0%,100%{transform:rotate(0)}20%{transform:rotate(-14deg)}40%{transform:rotate(12deg)}60%{transform:rotate(-8deg)}80%{transform:rotate(5deg)}}
@@ -186,10 +188,10 @@ h2{font-family:var(--display);font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:8
 .c-item a{color:var(--red);text-decoration:none}
 .c-item a:hover{text-decoration:underline}
 .socials{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-.socials a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:.85rem;font-weight:600;color:var(--red);border:1.5px solid rgba(158,10,15,.3);padding:10px 18px;border-radius:99px;transition:all .3s}
+.socials a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:.85rem;font-weight:600;color:var(--red);border:1.5px solid rgba(11,110,79,.3);padding:10px 18px;border-radius:99px;transition:all .3s}
 .socials a:hover{background:var(--red);color:#fff;transform:translateY(-3px)}
 .map-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:34px;position:relative;overflow:hidden}
-.map-card::after{content:"";position:absolute;right:-40px;bottom:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(201,154,60,.22),transparent 70%)}
+.map-card::after{content:"";position:absolute;right:-40px;bottom:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(201,162,39,.25),transparent 70%)}
 .map-card h3{font-family:var(--display);font-weight:700;font-size:1.2rem;margin-bottom:12px;color:var(--red)}
 .map-card p{font-size:.92rem;color:var(--ink-soft)}
 
@@ -198,19 +200,19 @@ footer{background:var(--ink);color:rgba(255,255,255,.7);padding:34px 0;text-alig
 footer .brand{color:#fff;font-size:1rem}
 
 /* Scroll-top */
-#toTop{position:fixed;right:26px;bottom:26px;width:50px;height:50px;border-radius:50%;border:0;background:var(--red);color:#fff;font-size:1.2rem;cursor:pointer;box-shadow:0 10px 26px rgba(158,10,15,.4);opacity:0;pointer-events:none;transform:translateY(16px);transition:all .4s;z-index:90}
+#toTop{position:fixed;right:26px;bottom:26px;width:50px;height:50px;border-radius:50%;border:0;background:var(--red);color:#fff;font-size:1.2rem;cursor:pointer;box-shadow:0 10px 26px rgba(11,110,79,.4);opacity:0;pointer-events:none;transform:translateY(16px);transition:all .4s;z-index:90}
 #toTop.show{opacity:1;pointer-events:auto;transform:none}
 #toTop:hover{background:var(--gold);color:var(--ink)}
 
 /* Progress bar */
-#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--red-soft));width:0;z-index:120}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#21D375,var(--gold));width:0;z-index:120}
 
 @media (max-width:860px){
   .hero-inner{grid-template-columns:1fr;text-align:center;padding-top:110px}
   .portrait{order:-1}
   .hero-tags,.hero-cta{justify-content:center}
   .about-grid,.contact-grid{grid-template-columns:1fr}
-  .nav-links{position:fixed;inset:0;background:rgba(110,5,9,.97);flex-direction:column;justify-content:center;gap:34px;transform:translateX(100%);transition:transform .4s;z-index:105}
+  .nav-links{position:fixed;inset:0;background:rgba(7,59,58,.97);flex-direction:column;justify-content:center;gap:34px;transform:translateX(100%);transition:transform .4s;z-index:105}
   .nav-links.open{transform:none}
   .nav-links a{color:#fff !important;font-size:1.2rem}
   nav.scrolled .nav-links a{color:#fff}
@@ -233,16 +235,17 @@ footer .brand{color:#fff;font-size:1rem}
 <nav id="nav">
   <a class="brand" href="#top">NĐ<em>Tấn</em></a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#about"><span data-lang="vi">Giới thiệu</span><span data-lang="en">About</span></a></li>
-    <li><a href="#teaching"><span data-lang="vi">Giảng dạy</span><span data-lang="en">Teaching</span></a></li>
-    <li><a href="#research"><span data-lang="vi">Nghiên cứu</span><span data-lang="en">Research</span></a></li>
-    <li><a href="#publications"><span data-lang="vi">Công bố</span><span data-lang="en">Publications</span></a></li>
-    <li><a href="#contact"><span data-lang="vi">Liên hệ</span><span data-lang="en">Contact</span></a></li>
+    <li><a href="#about"><span data-lang="vi">Giới thiệu</span><span data-lang="en">About</span><span data-lang="zh">关于</span></a></li>
+    <li><a href="#teaching"><span data-lang="vi">Giảng dạy</span><span data-lang="en">Teaching</span><span data-lang="zh">教学</span></a></li>
+    <li><a href="#research"><span data-lang="vi">Nghiên cứu</span><span data-lang="en">Research</span><span data-lang="zh">研究</span></a></li>
+    <li><a href="#publications"><span data-lang="vi">Công bố</span><span data-lang="en">Publications</span><span data-lang="zh">论文</span></a></li>
+    <li><a href="#contact"><span data-lang="vi">Liên hệ</span><span data-lang="en">Contact</span><span data-lang="zh">联系方式</span><span data-lang="zh">联系</span></a></li>
   </ul>
   <div style="display:flex;align-items:center;gap:14px">
     <div class="lang-toggle" role="group" aria-label="Language">
       <button id="btnVi" class="active" onclick="setLang('vi')">VI</button>
       <button id="btnEn" onclick="setLang('en')">EN</button>
+      <button id="btnZh" onclick="setLang('zh')">中</button>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -259,15 +262,15 @@ footer .brand{color:#fff;font-size:1rem}
 
   <div class="hero-inner">
     <div>
-      <span class="eyebrow"><span data-lang="vi">Khoa Công nghệ Thông tin · Đại học Yersin Đà Lạt</span><span data-lang="en">Faculty of Information Technology · Yersin University of Da Lat</span></span>
-      <h1><span data-lang="vi">ThS. Nguyễn Đức Tấn<br><span class="accent">Giảng viên &amp; Nhà nghiên cứu AI</span></span><span data-lang="en">Nguyen Duc Tan, MSc<br><span class="accent">Lecturer &amp; AI Researcher</span></span></h1>
-      <p class="hero-sub"><span data-lang="vi">Giảng dạy Công nghệ Thông tin và nghiên cứu ứng dụng Trí tuệ nhân tạo — từ dự báo chuỗi thời gian, xử lý ngôn ngữ tự nhiên tiếng Việt đến đồ thị tri thức phục vụ dữ liệu Việt Nam.</span><span data-lang="en">Teaching Information Technology and researching applied Artificial Intelligence — from time-series forecasting and Vietnamese NLP to knowledge graphs built on Vietnamese data.</span></p>
+      <span class="eyebrow"><span data-lang="vi">Khoa Công nghệ Thông tin · Đại học Yersin Đà Lạt</span><span data-lang="en">Faculty of Information Technology · Yersin University of Da Lat</span><span data-lang="zh">信息技术学院 · 大叻延森大学</span></span>
+      <h1><span data-lang="vi">ThS. Nguyễn Đức Tấn<br><span class="accent">Giảng viên &amp; Nhà nghiên cứu AI</span></span><span data-lang="en">Nguyen Duc Tan, MSc<br><span class="accent">Lecturer &amp; AI Researcher</span></span><span data-lang="zh">阮德晋 硕士<br><span class="accent">讲师 &amp; 人工智能研究员</span></span></h1>
+      <p class="hero-sub"><span data-lang="vi">Giảng dạy Công nghệ Thông tin và nghiên cứu ứng dụng Trí tuệ nhân tạo — từ dự báo chuỗi thời gian, xử lý ngôn ngữ tự nhiên tiếng Việt đến đồ thị tri thức phục vụ dữ liệu Việt Nam.</span><span data-lang="en">Teaching Information Technology and researching applied Artificial Intelligence — from time-series forecasting and Vietnamese NLP to knowledge graphs built on Vietnamese data.</span><span data-lang="zh">从事信息技术教学与应用人工智能研究——涵盖时间序列预测、越南语自然语言处理，以及基于越南数据的知识图谱。</span></p>
       <div class="hero-tags">
         <span>Machine Learning</span><span>Vietnamese NLP</span><span>Knowledge Graph</span><span>Time-Series Forecasting</span>
       </div>
       <div class="hero-cta">
-        <a class="btn btn-gold" href="#research"><span data-lang="vi">Xem nghiên cứu</span><span data-lang="en">View research</span></a>
-        <a class="btn btn-ghost" href="#contact"><span data-lang="vi">Liên hệ</span><span data-lang="en">Get in touch</span></a>
+        <a class="btn btn-gold" href="#research"><span data-lang="vi">Xem nghiên cứu</span><span data-lang="en">View research</span><span data-lang="zh">查看研究</span></a>
+        <a class="btn btn-ghost" href="#contact"><span data-lang="vi">Liên hệ</span><span data-lang="en">Get in touch</span><span data-lang="zh">联系我</span></a>
       </div>
     </div>
     <div class="portrait">
@@ -276,25 +279,25 @@ footer .brand{color:#fff;font-size:1rem}
       </div>
     </div>
   </div>
-  <div class="scroll-hint"><span data-lang="vi">Cuộn xuống</span><span data-lang="en">Scroll down</span></div>
+  <div class="scroll-hint"><span data-lang="vi">Cuộn xuống</span><span data-lang="en">Scroll down</span><span data-lang="zh">向下滚动</span></div>
 </header>
 
 <!-- ===== ABOUT ===== -->
 <section id="about">
   <div class="wrap">
-    <div class="sec-eyebrow reveal"><span data-lang="vi">Giới thiệu</span><span data-lang="en">About me</span></div>
-    <h2 class="reveal"><span data-lang="vi">Kết nối giảng dạy với nghiên cứu ứng dụng</span><span data-lang="en">Bridging teaching and applied research</span></h2>
+    <div class="sec-eyebrow reveal"><span data-lang="vi">Giới thiệu</span><span data-lang="en">About me</span><span data-lang="zh">关于我</span></div>
+    <h2 class="reveal"><span data-lang="vi">Kết nối giảng dạy với nghiên cứu ứng dụng</span><span data-lang="en">Bridging teaching and applied research</span><span data-lang="zh">连接教学与应用研究</span></h2>
     <div class="about-grid">
       <div class="about-text reveal d1">
-        <p><span data-lang="vi">Tôi là giảng viên Khoa Công nghệ Thông tin, <strong>Đại học Yersin Đà Lạt</strong>, phụ trách các học phần nền tảng về lập trình, cơ sở dữ liệu và trí tuệ nhân tạo, đồng thời hướng dẫn sinh viên thực tập doanh nghiệp và khóa luận tốt nghiệp.</span><span data-lang="en">I am a lecturer at the Faculty of Information Technology, <strong>Yersin University of Da Lat</strong>, teaching foundational courses in programming, databases and artificial intelligence, while supervising student internships and graduation theses.</span></p>
-        <p><span data-lang="vi">Định hướng nghiên cứu của tôi tập trung vào <strong>ứng dụng học máy và học sâu cho dữ liệu Việt Nam</strong>: dự báo giá nông sản Tây Nguyên, nhận dạng thực thể trong tin tuyển dụng CNTT, nhận dạng cây dược liệu bản địa và xây dựng đồ thị tri thức du lịch Đà Lạt. Tôi ưu tiên công bố tại các tạp chí Scopus uy tín và chia sẻ bộ dữ liệu mở cho cộng đồng.</span><span data-lang="en">My research focuses on <strong>applying machine learning and deep learning to Vietnamese data</strong>: forecasting Central Highlands agricultural prices, named-entity recognition in IT job postings, native medicinal plant recognition, and building a Da Lat tourism knowledge graph. I prioritise publishing in reputable Scopus-indexed journals and releasing open datasets for the community.</span></p>
-        <p><span data-lang="vi">Hiện tôi đang chuẩn bị cho chương trình <strong>nghiên cứu sinh Tiến sĩ về Trí tuệ nhân tạo</strong>, với mong muốn đưa các bài toán thực tiễn của Việt Nam vào dòng chảy nghiên cứu quốc tế.</span><span data-lang="en">I am currently preparing for a <strong>PhD in Artificial Intelligence</strong>, aiming to bring real-world Vietnamese problems into the international research conversation.</span></p>
+        <p><span data-lang="vi">Tôi là giảng viên Khoa Công nghệ Thông tin, <strong>Đại học Yersin Đà Lạt</strong>, phụ trách các học phần nền tảng về lập trình, cơ sở dữ liệu và trí tuệ nhân tạo, đồng thời hướng dẫn sinh viên thực tập doanh nghiệp và khóa luận tốt nghiệp.</span><span data-lang="en">I am a lecturer at the Faculty of Information Technology, <strong>Yersin University of Da Lat</strong>, teaching foundational courses in programming, databases and artificial intelligence, while supervising student internships and graduation theses.</span><span data-lang="zh">我是<strong>大叻延森大学</strong>信息技术学院讲师，主讲程序设计、数据库与人工智能等基础课程，同时指导学生企业实习与毕业论文。</span></p>
+        <p><span data-lang="vi">Định hướng nghiên cứu của tôi tập trung vào <strong>ứng dụng học máy và học sâu cho dữ liệu Việt Nam</strong>: dự báo giá nông sản Tây Nguyên, nhận dạng thực thể trong tin tuyển dụng CNTT, nhận dạng cây dược liệu bản địa và xây dựng đồ thị tri thức du lịch Đà Lạt. Tôi ưu tiên công bố tại các tạp chí Scopus uy tín và chia sẻ bộ dữ liệu mở cho cộng đồng.</span><span data-lang="en">My research focuses on <strong>applying machine learning and deep learning to Vietnamese data</strong>: forecasting Central Highlands agricultural prices, named-entity recognition in IT job postings, native medicinal plant recognition, and building a Da Lat tourism knowledge graph. I prioritise publishing in reputable Scopus-indexed journals and releasing open datasets for the community.</span><span data-lang="zh">我的研究方向为<strong>面向越南数据的机器学习与深度学习应用</strong>：西原高地农产品价格预测、IT招聘信息命名实体识别、本土药用植物识别，以及大叻旅游知识图谱构建。我注重在知名Scopus索引期刊发表论文，并向社区发布开放数据集。</span></p>
+        <p><span data-lang="vi">Hiện tôi đang chuẩn bị cho chương trình <strong>nghiên cứu sinh Tiến sĩ về Trí tuệ nhân tạo</strong>, với mong muốn đưa các bài toán thực tiễn của Việt Nam vào dòng chảy nghiên cứu quốc tế.</span><span data-lang="en">I am currently preparing for a <strong>PhD in Artificial Intelligence</strong>, aiming to bring real-world Vietnamese problems into the international research conversation.</span><span data-lang="zh">目前我正在筹备<strong>人工智能方向的博士研究</strong>，希望将越南的实际问题带入国际学术讨论。</span></p>
       </div>
       <div class="stats">
-        <div class="stat reveal d1"><div class="num" data-count="8">0</div><div class="lbl"><span data-lang="vi">Năm giảng dạy</span><span data-lang="en">Years teaching</span></div></div>
-        <div class="stat reveal d2"><div class="num" data-count="12">0</div><div class="lbl"><span data-lang="vi">Học phần phụ trách</span><span data-lang="en">Courses taught</span></div></div>
-        <div class="stat reveal d3"><div class="num" data-count="5">0</div><div class="lbl"><span data-lang="vi">Công bố khoa học</span><span data-lang="en">Publications</span></div></div>
-        <div class="stat reveal d4"><div class="num" data-count="30"><small>+</small>0</div><div class="lbl"><span data-lang="vi">Sinh viên hướng dẫn</span><span data-lang="en">Students supervised</span></div></div>
+        <div class="stat reveal d1"><div class="num" data-count="8">0</div><div class="lbl"><span data-lang="vi">Năm giảng dạy</span><span data-lang="en">Years teaching</span><span data-lang="zh">教学年限</span></div></div>
+        <div class="stat reveal d2"><div class="num" data-count="12">0</div><div class="lbl"><span data-lang="vi">Học phần phụ trách</span><span data-lang="en">Courses taught</span><span data-lang="zh">授课课程</span></div></div>
+        <div class="stat reveal d3"><div class="num" data-count="5">0</div><div class="lbl"><span data-lang="vi">Công bố khoa học</span><span data-lang="en">Publications</span><span data-lang="zh">学术论文</span></div></div>
+        <div class="stat reveal d4"><div class="num" data-count="30"><small>+</small>0</div><div class="lbl"><span data-lang="vi">Sinh viên hướng dẫn</span><span data-lang="en">Students supervised</span><span data-lang="zh">指导学生</span></div></div>
       </div>
     </div>
   </div>
@@ -303,29 +306,29 @@ footer .brand{color:#fff;font-size:1rem}
 <!-- ===== TEACHING ===== -->
 <section id="teaching">
   <div class="wrap">
-    <div class="sec-eyebrow reveal"><span data-lang="vi">Hoạt động giảng dạy</span><span data-lang="en">Teaching</span></div>
-    <h2 class="reveal"><span data-lang="vi">Học phần &amp; hướng dẫn sinh viên</span><span data-lang="en">Courses &amp; student mentoring</span></h2>
-    <p class="lead reveal d1"><span data-lang="vi">Thiết kế bài giảng hiện đại, gắn lý thuyết với dự án thực tế và nhu cầu tuyển dụng của thị trường CNTT Việt Nam.</span><span data-lang="en">Modern course design that connects theory with hands-on projects and the real demands of Vietnam's IT job market.</span></p>
+    <div class="sec-eyebrow reveal"><span data-lang="vi">Hoạt động giảng dạy</span><span data-lang="en">Teaching</span><span data-lang="zh">教学工作</span></div>
+    <h2 class="reveal"><span data-lang="vi">Học phần &amp; hướng dẫn sinh viên</span><span data-lang="en">Courses &amp; student mentoring</span><span data-lang="zh">课程与学生指导</span></h2>
+    <p class="lead reveal d1"><span data-lang="vi">Thiết kế bài giảng hiện đại, gắn lý thuyết với dự án thực tế và nhu cầu tuyển dụng của thị trường CNTT Việt Nam.</span><span data-lang="en">Modern course design that connects theory with hands-on projects and the real demands of Vietnam's IT job market.</span><span data-lang="zh">现代化课程设计，将理论与实践项目及越南IT就业市场的实际需求相结合。</span></p>
     <div class="cards">
       <div class="card reveal d1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13 4l-2 16"/></svg></div>
-        <h3><span data-lang="vi">Nhập môn Lập trình</span><span data-lang="en">Introduction to Programming</span></h3>
-        <p><span data-lang="vi">Tư duy giải thuật và lập trình Python cho sinh viên năm nhất, kèm hệ thống bài tập thực hành theo dự án nhỏ.</span><span data-lang="en">Algorithmic thinking and Python programming for first-year students, with project-based practice exercises.</span></p>
+        <h3><span data-lang="vi">Nhập môn Lập trình</span><span data-lang="en">Introduction to Programming</span><span data-lang="zh">程序设计导论</span></h3>
+        <p><span data-lang="vi">Tư duy giải thuật và lập trình Python cho sinh viên năm nhất, kèm hệ thống bài tập thực hành theo dự án nhỏ.</span><span data-lang="en">Algorithmic thinking and Python programming for first-year students, with project-based practice exercises.</span><span data-lang="zh">面向大一学生的算法思维与Python程序设计，配以项目式实践练习。</span></p>
       </div>
       <div class="card reveal d2">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
-        <h3><span data-lang="vi">Cơ sở dữ liệu</span><span data-lang="en">Databases</span></h3>
-        <p><span data-lang="vi">Mô hình hóa dữ liệu, SQL và giới thiệu NoSQL/Graph Database (Neo4j) qua các tình huống nghiệp vụ thực tế.</span><span data-lang="en">Data modelling, SQL, and an introduction to NoSQL/graph databases (Neo4j) through real business scenarios.</span></p>
+        <h3><span data-lang="vi">Cơ sở dữ liệu</span><span data-lang="en">Databases</span><span data-lang="zh">数据库</span></h3>
+        <p><span data-lang="vi">Mô hình hóa dữ liệu, SQL và giới thiệu NoSQL/Graph Database (Neo4j) qua các tình huống nghiệp vụ thực tế.</span><span data-lang="en">Data modelling, SQL, and an introduction to NoSQL/graph databases (Neo4j) through real business scenarios.</span><span data-lang="zh">通过真实业务场景讲授数据建模、SQL，并介绍NoSQL/图数据库（Neo4j）。</span></p>
       </div>
       <div class="card reveal d3">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg></div>
-        <h3><span data-lang="vi">Trí tuệ nhân tạo &amp; Học máy</span><span data-lang="en">AI &amp; Machine Learning</span></h3>
-        <p><span data-lang="vi">Từ nền tảng học máy cổ điển đến học sâu ứng dụng, thực hành trên bộ dữ liệu Việt Nam do chính nhóm nghiên cứu xây dựng.</span><span data-lang="en">From classical ML foundations to applied deep learning, practising on Vietnamese datasets built by our research group.</span></p>
+        <h3><span data-lang="vi">Trí tuệ nhân tạo &amp; Học máy</span><span data-lang="en">AI &amp; Machine Learning</span><span data-lang="zh">人工智能与机器学习</span></h3>
+        <p><span data-lang="vi">Từ nền tảng học máy cổ điển đến học sâu ứng dụng, thực hành trên bộ dữ liệu Việt Nam do chính nhóm nghiên cứu xây dựng.</span><span data-lang="en">From classical ML foundations to applied deep learning, practising on Vietnamese datasets built by our research group.</span><span data-lang="zh">从经典机器学习基础到应用深度学习，基于本研究组构建的越南数据集进行实践。</span></p>
       </div>
       <div class="card reveal d4">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></svg></div>
-        <h3><span data-lang="vi">Thực tập &amp; Khóa luận</span><span data-lang="en">Internships &amp; Theses</span></h3>
-        <p><span data-lang="vi">Quản lý thực tập doanh nghiệp và hướng dẫn khóa luận cho sinh viên CNTT, kết nối với doanh nghiệp tại Đà Lạt và TP.HCM.</span><span data-lang="en">Managing corporate internships and supervising IT theses, in partnership with companies in Da Lat and Ho Chi Minh City.</span></p>
+        <h3><span data-lang="vi">Thực tập &amp; Khóa luận</span><span data-lang="en">Internships &amp; Theses</span><span data-lang="zh">实习与毕业论文</span></h3>
+        <p><span data-lang="vi">Quản lý thực tập doanh nghiệp và hướng dẫn khóa luận cho sinh viên CNTT, kết nối với doanh nghiệp tại Đà Lạt và TP.HCM.</span><span data-lang="en">Managing corporate internships and supervising IT theses, in partnership with companies in Da Lat and Ho Chi Minh City.</span><span data-lang="zh">管理企业实习并指导IT毕业论文，与大叻及胡志明市的企业开展合作。</span></p>
       </div>
     </div>
   </div>
@@ -334,33 +337,33 @@ footer .brand{color:#fff;font-size:1rem}
 <!-- ===== RESEARCH ===== -->
 <section id="research">
   <div class="wrap">
-    <div class="sec-eyebrow reveal"><span data-lang="vi">Hoạt động nghiên cứu</span><span data-lang="en">Research</span></div>
-    <h2 class="reveal"><span data-lang="vi">Hướng nghiên cứu chính</span><span data-lang="en">Current research directions</span></h2>
-    <p class="lead reveal d1"><span data-lang="vi">AI ứng dụng cho các bài toán đặc thù của Việt Nam — dữ liệu mở, phương pháp minh bạch, hướng đến công bố quốc tế.</span><span data-lang="en">Applied AI for problems specific to Vietnam — open data, transparent methods, aimed at international publication.</span></p>
+    <div class="sec-eyebrow reveal"><span data-lang="vi">Hoạt động nghiên cứu</span><span data-lang="en">Research</span><span data-lang="zh">研究工作</span></div>
+    <h2 class="reveal"><span data-lang="vi">Hướng nghiên cứu chính</span><span data-lang="en">Current research directions</span><span data-lang="zh">主要研究方向</span></h2>
+    <p class="lead reveal d1"><span data-lang="vi">AI ứng dụng cho các bài toán đặc thù của Việt Nam — dữ liệu mở, phương pháp minh bạch, hướng đến công bố quốc tế.</span><span data-lang="en">Applied AI for problems specific to Vietnam — open data, transparent methods, aimed at international publication.</span><span data-lang="zh">面向越南特有问题的应用人工智能——开放数据、透明方法，以国际发表为目标。</span></p>
 
     <div class="timeline">
       <div class="titem reveal">
-        <span class="tag"><span data-lang="vi">Dự báo chuỗi thời gian</span><span data-lang="en">Time-series forecasting</span></span>
-        <h3><span data-lang="vi">Dự báo giá cà phê Robusta Việt Nam</span><span data-lang="en">Vietnamese Robusta coffee price forecasting</span></h3>
-        <p><span data-lang="vi">Bộ dữ liệu giá cà phê 5 tỉnh Tây Nguyên (2020–2026) kết hợp biến thời tiết; nghiên cứu tính bền vững của mô hình trước dịch chuyển phân phối trong giai đoạn giá tăng đột biến 2023–2025 và dự báo xác suất.</span><span data-lang="en">A five-province Central Highlands coffee price dataset (2020–2026) with weather covariates; studying model robustness under concept drift during the 2023–2025 price surge, plus probabilistic forecasting.</span></p>
+        <span class="tag"><span data-lang="vi">Dự báo chuỗi thời gian</span><span data-lang="en">Time-series forecasting</span><span data-lang="zh">时间序列预测</span></span>
+        <h3><span data-lang="vi">Dự báo giá cà phê Robusta Việt Nam</span><span data-lang="en">Vietnamese Robusta coffee price forecasting</span><span data-lang="zh">越南罗布斯塔咖啡价格预测</span></h3>
+        <p><span data-lang="vi">Bộ dữ liệu giá cà phê 5 tỉnh Tây Nguyên (2020–2026) kết hợp biến thời tiết; nghiên cứu tính bền vững của mô hình trước dịch chuyển phân phối trong giai đoạn giá tăng đột biến 2023–2025 và dự báo xác suất.</span><span data-lang="en">A five-province Central Highlands coffee price dataset (2020–2026) with weather covariates; studying model robustness under concept drift during the 2023–2025 price surge, plus probabilistic forecasting.</span><span data-lang="zh">覆盖西原高地五省的咖啡价格数据集（2020–2026），结合气象协变量；研究模型在2023–2025年价格飙升期间概念漂移下的稳健性，以及概率预测。</span></p>
         <div class="tech"><span>LSTM / TFT</span><span>Concept Drift</span><span>Open-Meteo</span><span>Probabilistic Forecasting</span></div>
       </div>
       <div class="titem reveal d1">
-        <span class="tag"><span data-lang="vi">Xử lý ngôn ngữ tự nhiên</span><span data-lang="en">Natural language processing</span></span>
-        <h3><span data-lang="vi">NER cho tin tuyển dụng CNTT tiếng Việt</span><span data-lang="en">NER for Vietnamese IT job postings</span></h3>
-        <p><span data-lang="vi">Xây dựng bộ dữ liệu gán nhãn thực thể (kỹ năng, vị trí, cấp bậc, chứng chỉ...) từ TopCV, VietnamWorks, ITviec — xử lý thách thức trộn mã Việt–Anh, công bố dataset mở kèm mô hình baseline.</span><span data-lang="en">Building an annotated entity dataset (skills, roles, seniority, certificates...) from major Vietnamese job boards — tackling Vietnamese–English code-switching, with an open dataset and baseline models.</span></p>
+        <span class="tag"><span data-lang="vi">Xử lý ngôn ngữ tự nhiên</span><span data-lang="en">Natural language processing</span><span data-lang="zh">自然语言处理</span></span>
+        <h3><span data-lang="vi">NER cho tin tuyển dụng CNTT tiếng Việt</span><span data-lang="en">NER for Vietnamese IT job postings</span><span data-lang="zh">越南IT招聘信息命名实体识别</span></h3>
+        <p><span data-lang="vi">Xây dựng bộ dữ liệu gán nhãn thực thể (kỹ năng, vị trí, cấp bậc, chứng chỉ...) từ TopCV, VietnamWorks, ITviec — xử lý thách thức trộn mã Việt–Anh, công bố dataset mở kèm mô hình baseline.</span><span data-lang="en">Building an annotated entity dataset (skills, roles, seniority, certificates...) from major Vietnamese job boards — tackling Vietnamese–English code-switching, with an open dataset and baseline models.</span><span data-lang="zh">基于越南主要招聘网站构建实体标注数据集（技能、职位、级别、证书等），应对越英语码转换难题，并发布开放数据集与基线模型。</span></p>
         <div class="tech"><span>PhoBERT</span><span>Label Studio</span><span>Code-switching</span><span>Open Dataset</span></div>
       </div>
       <div class="titem reveal d2">
-        <span class="tag"><span data-lang="vi">Thị giác máy tính</span><span data-lang="en">Computer vision</span></span>
-        <h3><span data-lang="vi">Nhận dạng cây dược liệu Việt Nam</span><span data-lang="en">Vietnamese medicinal plant recognition</span></h3>
-        <p><span data-lang="vi">Nhận dạng 41 loài cây dược liệu bằng mạng nơ-ron nhẹ (MobileNetV2, EfficientNetB0); mở rộng theo hướng XAI, nhận diện loài ngoài tập huấn luyện (open-set) và tích hợp tri thức y học cổ truyền.</span><span data-lang="en">Recognising 41 medicinal plant species with lightweight networks (MobileNetV2, EfficientNetB0); extending toward XAI, open-set rejection and integration with traditional-medicine knowledge.</span></p>
+        <span class="tag"><span data-lang="vi">Thị giác máy tính</span><span data-lang="en">Computer vision</span><span data-lang="zh">计算机视觉</span></span>
+        <h3><span data-lang="vi">Nhận dạng cây dược liệu Việt Nam</span><span data-lang="en">Vietnamese medicinal plant recognition</span><span data-lang="zh">越南药用植物识别</span></h3>
+        <p><span data-lang="vi">Nhận dạng 41 loài cây dược liệu bằng mạng nơ-ron nhẹ (MobileNetV2, EfficientNetB0); mở rộng theo hướng XAI, nhận diện loài ngoài tập huấn luyện (open-set) và tích hợp tri thức y học cổ truyền.</span><span data-lang="en">Recognising 41 medicinal plant species with lightweight networks (MobileNetV2, EfficientNetB0); extending toward XAI, open-set rejection and integration with traditional-medicine knowledge.</span><span data-lang="zh">采用轻量级网络（MobileNetV2、EfficientNetB0）识别41种药用植物；正向可解释AI、开集识别及传统医学知识融合方向拓展。</span></p>
         <div class="tech"><span>MobileNetV2</span><span>XAI</span><span>Open-set Recognition</span><span>Few-shot</span></div>
       </div>
       <div class="titem reveal d3">
-        <span class="tag"><span data-lang="vi">Đồ thị tri thức</span><span data-lang="en">Knowledge graph</span></span>
-        <h3><span data-lang="vi">Đồ thị tri thức Du lịch Đà Lạt</span><span data-lang="en">Da Lat Tourism Knowledge Graph</span></h3>
-        <p><span data-lang="vi">Xây dựng đồ thị tri thức về điểm đến, dịch vụ và sự kiện du lịch Đà Lạt trên Neo4j, tích hợp dữ liệu mở từ OpenStreetMap, Wikidata và dữ liệu thời tiết phục vụ gợi ý lịch trình thông minh.</span><span data-lang="en">A Neo4j knowledge graph of Da Lat destinations, services and events, integrating open data from OpenStreetMap, Wikidata and weather sources for intelligent itinerary recommendation.</span></p>
+        <span class="tag"><span data-lang="vi">Đồ thị tri thức</span><span data-lang="en">Knowledge graph</span><span data-lang="zh">知识图谱</span></span>
+        <h3><span data-lang="vi">Đồ thị tri thức Du lịch Đà Lạt</span><span data-lang="en">Da Lat Tourism Knowledge Graph</span><span data-lang="zh">大叻旅游知识图谱</span></h3>
+        <p><span data-lang="vi">Xây dựng đồ thị tri thức về điểm đến, dịch vụ và sự kiện du lịch Đà Lạt trên Neo4j, tích hợp dữ liệu mở từ OpenStreetMap, Wikidata và dữ liệu thời tiết phục vụ gợi ý lịch trình thông minh.</span><span data-lang="en">A Neo4j knowledge graph of Da Lat destinations, services and events, integrating open data from OpenStreetMap, Wikidata and weather sources for intelligent itinerary recommendation.</span><span data-lang="zh">基于Neo4j构建大叻景点、服务与活动的知识图谱，融合OpenStreetMap、Wikidata及气象开放数据，用于智能行程推荐。</span></p>
         <div class="tech"><span>Neo4j</span><span>Wikidata</span><span>OSM / Overpass</span><span>Recommendation</span></div>
       </div>
     </div>
@@ -370,33 +373,33 @@ footer .brand{color:#fff;font-size:1rem}
 <!-- ===== PUBLICATIONS ===== -->
 <section id="publications">
   <div class="wrap">
-    <div class="sec-eyebrow reveal"><span data-lang="vi">Công bố khoa học</span><span data-lang="en">Publications</span></div>
-    <h2 class="reveal"><span data-lang="vi">Bài báo tiêu biểu</span><span data-lang="en">Selected publications</span></h2>
-    <p class="lead reveal d1"><span data-lang="vi">Danh sách dưới đây là chỗ dành sẵn — thay bằng thông tin bài báo thực tế của thầy.</span><span data-lang="en">The entries below are placeholders — replace them with your actual papers.</span></p>
+    <div class="sec-eyebrow reveal"><span data-lang="vi">Công bố khoa học</span><span data-lang="en">Publications</span><span data-lang="zh">学术论文</span></div>
+    <h2 class="reveal"><span data-lang="vi">Bài báo tiêu biểu</span><span data-lang="en">Selected publications</span><span data-lang="zh">代表性论文</span></h2>
+    <p class="lead reveal d1"><span data-lang="vi">Danh sách dưới đây là chỗ dành sẵn — thay bằng thông tin bài báo thực tế của thầy.</span><span data-lang="en">The entries below are placeholders — replace them with your actual papers.</span><span data-lang="zh">以下条目为占位内容——请替换为您的实际论文信息。</span></p>
     <div class="pubs">
       <div class="pub reveal d1">
         <div class="year">2025</div>
         <div>
-          <h3><span data-lang="vi">[Tên bài báo về nhận dạng cây dược liệu Việt Nam bằng mạng nơ-ron nhẹ]</span><span data-lang="en">[Paper title on Vietnamese medicinal plant recognition with lightweight neural networks]</span></h3>
-          <p><span data-lang="vi">Tên tạp chí / hội nghị · Scopus Q? · DOI: 10.xxxx/xxxxx</span><span data-lang="en">Journal / conference name · Scopus Q? · DOI: 10.xxxx/xxxxx</span></p>
+          <h3><span data-lang="vi">[Tên bài báo về nhận dạng cây dược liệu Việt Nam bằng mạng nơ-ron nhẹ]</span><span data-lang="en">[Paper title on Vietnamese medicinal plant recognition with lightweight neural networks]</span><span data-lang="zh">［关于轻量级神经网络越南药用植物识别的论文标题］</span></h3>
+          <p><span data-lang="vi">Tên tạp chí / hội nghị · Scopus Q? · DOI: 10.xxxx/xxxxx</span><span data-lang="en">Journal / conference name · Scopus Q? · DOI: 10.xxxx/xxxxx</span><span data-lang="zh">期刊/会议名称 · Scopus Q? · DOI: 10.xxxx/xxxxx</span></p>
         </div>
       </div>
       <div class="pub reveal d2">
         <div class="year">2026</div>
         <div>
-          <h3><span data-lang="vi">[Tên bài báo về dự báo giá cà phê Robusta — đang thực hiện]</span><span data-lang="en">[Paper title on Robusta coffee price forecasting — in progress]</span></h3>
-          <p><span data-lang="vi">Đang chuẩn bị nộp · Tạp chí Scopus mục tiêu</span><span data-lang="en">In preparation · Target Scopus-indexed journal</span></p>
+          <h3><span data-lang="vi">[Tên bài báo về dự báo giá cà phê Robusta — đang thực hiện]</span><span data-lang="en">[Paper title on Robusta coffee price forecasting — in progress]</span><span data-lang="zh">［关于罗布斯塔咖啡价格预测的论文标题——进行中］</span></h3>
+          <p><span data-lang="vi">Đang chuẩn bị nộp · Tạp chí Scopus mục tiêu</span><span data-lang="en">In preparation · Target Scopus-indexed journal</span><span data-lang="zh">撰写中 · 目标Scopus索引期刊</span></p>
         </div>
       </div>
       <div class="pub reveal d3">
         <div class="year">2026</div>
         <div>
-          <h3><span data-lang="vi">[Tên bài báo dataset + baseline về NER tin tuyển dụng CNTT tiếng Việt — đang thực hiện]</span><span data-lang="en">[Dataset + baseline paper on Vietnamese IT job posting NER — in progress]</span></h3>
-          <p><span data-lang="vi">Đang chuẩn bị nộp · Dataset công bố trên Zenodo &amp; Hugging Face</span><span data-lang="en">In preparation · Dataset released on Zenodo &amp; Hugging Face</span></p>
+          <h3><span data-lang="vi">[Tên bài báo dataset + baseline về NER tin tuyển dụng CNTT tiếng Việt — đang thực hiện]</span><span data-lang="en">[Dataset + baseline paper on Vietnamese IT job posting NER — in progress]</span><span data-lang="zh">［越南IT招聘信息NER数据集与基线论文——进行中］</span></h3>
+          <p><span data-lang="vi">Đang chuẩn bị nộp · Dataset công bố trên Zenodo &amp; Hugging Face</span><span data-lang="en">In preparation · Dataset released on Zenodo &amp; Hugging Face</span><span data-lang="zh">撰写中 · 数据集发布于Zenodo与Hugging Face</span></p>
         </div>
       </div>
     </div>
-    <p class="pub-note reveal"><span data-lang="vi">Xem danh sách đầy đủ trên Google Scholar / ORCID (liên kết ở phần Liên hệ).</span><span data-lang="en">See the full list on Google Scholar / ORCID (links in the Contact section).</span></p>
+    <p class="pub-note reveal"><span data-lang="vi">Xem danh sách đầy đủ trên Google Scholar / ORCID (liên kết ở phần Liên hệ).</span><span data-lang="en">See the full list on Google Scholar / ORCID (links in the Contact section).</span><span data-lang="zh">完整列表请见Google Scholar / ORCID（链接见"联系方式"部分）。</span></p>
   </div>
 </section>
 
@@ -404,8 +407,8 @@ footer .brand{color:#fff;font-size:1rem}
 <section id="contact">
   <div class="wrap">
     <div class="sec-eyebrow reveal"><span data-lang="vi">Liên hệ</span><span data-lang="en">Contact</span></div>
-    <h2 class="reveal"><span data-lang="vi">Kết nối &amp; hợp tác</span><span data-lang="en">Connect &amp; collaborate</span></h2>
-    <p class="lead reveal d1"><span data-lang="vi">Luôn sẵn sàng trao đổi về hợp tác nghiên cứu, hướng dẫn sinh viên và các dự án AI ứng dụng cho dữ liệu Việt Nam.</span><span data-lang="en">Always open to research collaboration, student mentoring, and applied AI projects on Vietnamese data.</span></p>
+    <h2 class="reveal"><span data-lang="vi">Kết nối &amp; hợp tác</span><span data-lang="en">Connect &amp; collaborate</span><span data-lang="zh">联系与合作</span></h2>
+    <p class="lead reveal d1"><span data-lang="vi">Luôn sẵn sàng trao đổi về hợp tác nghiên cứu, hướng dẫn sinh viên và các dự án AI ứng dụng cho dữ liệu Việt Nam.</span><span data-lang="en">Always open to research collaboration, student mentoring, and applied AI projects on Vietnamese data.</span><span data-lang="zh">随时欢迎科研合作、学生指导，以及基于越南数据的应用AI项目交流。</span></p>
     <div class="contact-grid">
       <div>
         <div class="c-list">
@@ -415,11 +418,11 @@ footer .brand{color:#fff;font-size:1rem}
           </div>
           <div class="c-item reveal d2">
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
-            <div><div class="lbl"><span data-lang="vi">Địa chỉ</span><span data-lang="en">Address</span></div><div class="val"><span data-lang="vi">Khoa CNTT, Đại học Yersin Đà Lạt — 27 Tôn Thất Tùng, P.8, TP. Đà Lạt, Lâm Đồng</span><span data-lang="en">Faculty of IT, Yersin University of Da Lat — 27 Ton That Tung, Ward 8, Da Lat, Lam Dong</span></div></div>
+            <div><div class="lbl"><span data-lang="vi">Địa chỉ</span><span data-lang="en">Address</span><span data-lang="zh">地址</span></div><div class="val"><span data-lang="vi">Khoa CNTT, Đại học Yersin Đà Lạt — 27 Tôn Thất Tùng, P.8, TP. Đà Lạt, Lâm Đồng</span><span data-lang="en">Faculty of IT, Yersin University of Da Lat — 27 Ton That Tung, Ward 8, Da Lat, Lam Dong</span><span data-lang="zh">大叻延森大学信息技术学院——林同省大叻市第八坊孙室松路27号</span></div></div>
           </div>
           <div class="c-item reveal d3">
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg></div>
-            <div><div class="lbl"><span data-lang="vi">Điện thoại</span><span data-lang="en">Phone</span></div><div class="val">+84 xxx xxx xxx</div></div>
+            <div><div class="lbl"><span data-lang="vi">Điện thoại</span><span data-lang="en">Phone</span><span data-lang="zh">电话</span></div><div class="val">+84 xxx xxx xxx</div></div>
           </div>
         </div>
         <div class="socials reveal d4">
@@ -430,11 +433,11 @@ footer .brand{color:#fff;font-size:1rem}
         </div>
       </div>
       <div class="map-card reveal d2">
-        <h3><span data-lang="vi">Giờ tiếp sinh viên</span><span data-lang="en">Office hours</span></h3>
-        <p><span data-lang="vi">Thứ Ba &amp; Thứ Năm, 14:00–16:30 tại Văn phòng Khoa CNTT. Sinh viên vui lòng đặt lịch trước qua email. Ngoài giờ trên, tôi phản hồi email trong vòng 24–48 giờ làm việc.</span><span data-lang="en">Tuesdays &amp; Thursdays, 2:00–4:30 PM at the Faculty of IT office. Please book in advance by email. Outside these hours, I reply to email within 24–48 working hours.</span></p>
+        <h3><span data-lang="vi">Giờ tiếp sinh viên</span><span data-lang="en">Office hours</span><span data-lang="zh">答疑时间</span></h3>
+        <p><span data-lang="vi">Thứ Ba &amp; Thứ Năm, 14:00–16:30 tại Văn phòng Khoa CNTT. Sinh viên vui lòng đặt lịch trước qua email. Ngoài giờ trên, tôi phản hồi email trong vòng 24–48 giờ làm việc.</span><span data-lang="en">Tuesdays &amp; Thursdays, 2:00–4:30 PM at the Faculty of IT office. Please book in advance by email. Outside these hours, I reply to email within 24–48 working hours.</span><span data-lang="zh">每周二、周四下午2:00–4:30，地点为信息技术学院办公室，请提前发送邮件预约。其余时间，我会在24–48个工作小时内回复邮件。</span></p>
         <br>
-        <h3><span data-lang="vi">Hợp tác nghiên cứu</span><span data-lang="en">Research collaboration</span></h3>
-        <p><span data-lang="vi">Quan tâm đến đồng nghiên cứu về ML/NLP/KG trên dữ liệu Việt Nam? Hãy gửi email kèm mô tả ngắn về ý tưởng — tôi rất vui được trao đổi.</span><span data-lang="en">Interested in co-research on ML/NLP/KG with Vietnamese data? Send an email with a short description of your idea — I would be glad to talk.</span></p>
+        <h3><span data-lang="vi">Hợp tác nghiên cứu</span><span data-lang="en">Research collaboration</span><span data-lang="zh">科研合作</span></h3>
+        <p><span data-lang="vi">Quan tâm đến đồng nghiên cứu về ML/NLP/KG trên dữ liệu Việt Nam? Hãy gửi email kèm mô tả ngắn về ý tưởng — tôi rất vui được trao đổi.</span><span data-lang="en">Interested in co-research on ML/NLP/KG with Vietnamese data? Send an email with a short description of your idea — I would be glad to talk.</span><span data-lang="zh">有意开展基于越南数据的机器学习/NLP/知识图谱合作研究？欢迎发送邮件并附上想法简介——期待与您交流。</span></p>
       </div>
     </div>
   </div>
@@ -443,7 +446,7 @@ footer .brand{color:#fff;font-size:1rem}
 <footer>
   <div class="wrap">
     <div class="brand" style="margin-bottom:8px">NĐ<em style="color:var(--gold);font-style:normal">Tấn</em></div>
-    <p><span data-lang="vi">© 2026 ThS. Nguyễn Đức Tấn · Khoa CNTT, Đại học Yersin Đà Lạt</span><span data-lang="en">© 2026 Nguyen Duc Tan, MSc · Faculty of IT, Yersin University of Da Lat</span></p>
+    <p><span data-lang="vi">© 2026 ThS. Nguyễn Đức Tấn · Khoa CNTT, Đại học Yersin Đà Lạt</span><span data-lang="en">© 2026 Nguyen Duc Tan, MSc · Faculty of IT, Yersin University of Da Lat</span><span data-lang="zh">© 2026 阮德晋 硕士 · 大叻延森大学信息技术学院</span></p>
   </div>
 </footer>
 
@@ -453,12 +456,16 @@ footer .brand{color:#fff;font-size:1rem}
 /* ===== Language toggle ===== */
 function setLang(lang){
   document.documentElement.setAttribute('data-active', lang);
-  document.documentElement.lang = lang;
+  document.documentElement.lang = lang==='zh' ? 'zh-Hans' : lang;
   document.getElementById('btnVi').classList.toggle('active', lang==='vi');
   document.getElementById('btnEn').classList.toggle('active', lang==='en');
-  document.title = lang==='vi'
-    ? 'ThS. Nguyễn Đức Tấn — Giảng viên CNTT | Đại học Yersin Đà Lạt'
-    : 'Nguyen Duc Tan, MSc — IT Lecturer | Yersin University of Da Lat';
+  document.getElementById('btnZh').classList.toggle('active', lang==='zh');
+  const titles = {
+    vi: 'ThS. Nguyễn Đức Tấn — Giảng viên CNTT | Đại học Yersin Đà Lạt',
+    en: 'Nguyen Duc Tan, MSc — IT Lecturer | Yersin University of Da Lat',
+    zh: '阮德晋 硕士 — 信息技术讲师 | 大叻延森大学'
+  };
+  document.title = titles[lang];
 }
 document.documentElement.setAttribute('data-active','vi');
 
